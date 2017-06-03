@@ -1,0 +1,105 @@
+/* ## General styles
+--------------------------------------------- */
+body {
+    margin: 0;
+    font: 14px Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+}
+a {
+    color: #444;
+    text-decoration: none;
+}
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+.clearfix::before,
+.clearfix::after {
+    content: ' ';
+    display: table;
+}
+.clearfix::after {
+    clear: both;
+}
+
+/* ## Responsive menu toggle
+--------------------------------------------- */
+.menubar {
+    background: #444;
+    color: #fff;
+    font-weight: bold;
+    display: none;
+}
+.menubar span {
+    cursor: pointer;
+    padding: 15px;
+}
+.menubar-left {
+    float: left;
+}
+.menubar-right {
+    float: right;
+}
+
+/* ## Page wrapper
+--------------------------------------------- */
+.wrapper {
+    margin: auto;
+    max-width: 1200px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* ## Navigation
+--------------------------------------------- */
+.demo-nav {
+    background-color: #eee;
+}
+.demo-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.demo-nav li ul {
+    position: absolute;
+    width: 200px;
+    border-top: 1px solid #d7d7d7;
+    display: none;
+}
+.demo-nav li li ul {
+    margin-left: 199px;
+    top: -1px;
+}
+.demo-nav li:hover > ul {
+    display: block;
+}
+.demo-nav li {
+    position: relative;
+}
+.demo-nav > ul > li {
+    float: left;
+}
+.demo-nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+.demo-nav li:hover > a,
+.demo-nav li:focus > a {
+    background-color: #d7d7d7;
+}
+.demo-nav li li a {
+    border: solid #d7d7d7;
+    border-width: 0 1px 1px;
+}
+
+/* ## Hide navigation / Show menu toggle 
+--------------------------------------------- */
+@media screen and (max-width: 768px) {
+    .demo-nav {
+        display: none;
+    }
+    .menubar {
+        display: block;
+    }
+}
